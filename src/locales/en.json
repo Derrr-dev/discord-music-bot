@@ -1,0 +1,143 @@
+{
+  "common": {
+    "error": "An error occurred",
+    "success": "Success",
+    "notInVoice": "You must join a voice channel first!",
+    "notSameVoice": "You must be in the same voice channel as the bot!",
+    "noPlayer": "No music is currently playing!",
+    "noQueue": "The queue is empty!",
+    "noPermission": "You don't have permission to use this command!",
+    "djOnly": "This command can only be used by DJ or Admin!",
+    "loading": "Loading...",
+    "duration": "Duration",
+    "requestedBy": "Requested by",
+    "source": "Source",
+    "position": "Position",
+    "volume": "Volume",
+    "page": "Page"
+  },
+  "play": {
+    "searching": "🔍 Searching: **{query}**",
+    "notFound": "❌ No results found for: **{query}**",
+    "added": "✅ Added to queue: **{title}**",
+    "addedPlaylist": "✅ Adding **{count}** tracks from **{name}** to queue",
+    "playing": "▶️ Now playing: **{title}**",
+    "queueFull": "❌ Queue is full! Maximum {max} songs",
+    "spotifyLink": "🎵 Detected Spotify link, fetching metadata...",
+    "liveStream": "🔴 Live Stream"
+  },
+  "queue": {
+    "title": "🎵 Music Queue",
+    "empty": "Queue is empty. Use `/play` to add songs!",
+    "nowPlaying": "Now Playing",
+    "upNext": "Up Next",
+    "songs": "songs",
+    "totalDuration": "Total Duration",
+    "loop": "Loop",
+    "shuffle": "Shuffle",
+    "autoplay": "Autoplay"
+  },
+  "nowplaying": {
+    "title": "🎵 Now Playing",
+    "progress": "Progress",
+    "loop": "Loop Mode",
+    "shuffle": "Shuffle",
+    "autoplay": "Autoplay",
+    "volume": "Volume"
+  },
+  "skip": {
+    "success": "⏭️ Skipped: **{title}**",
+    "noNext": "There is no next song!"
+  },
+  "previous": {
+    "success": "⏮️ Going back to: **{title}**",
+    "noPrevious": "There is no previous song!"
+  },
+  "pause": {
+    "success": "⏸️ Music paused",
+    "alreadyPaused": "Music is already paused!"
+  },
+  "resume": {
+    "success": "▶️ Music resumed",
+    "notPaused": "Music is not paused!"
+  },
+  "stop": {
+    "success": "⏹️ Music stopped and queue cleared"
+  },
+  "loop": {
+    "none": "⬜ Loop mode disabled",
+    "track": "🔂 Looping this track",
+    "queue": "🔁 Looping the entire queue"
+  },
+  "shuffle": {
+    "on": "🔀 Shuffle mode enabled",
+    "off": "➡️ Shuffle mode disabled"
+  },
+  "volume": {
+    "set": "🔊 Volume set to **{volume}%**",
+    "invalid": "Volume must be between 1 and 100!",
+    "current": "Current volume: **{volume}%**"
+  },
+  "lyrics": {
+    "title": "📜 Lyrics: {title}",
+    "notFound": "❌ Lyrics not found for: **{title}**",
+    "searching": "🔍 Searching for lyrics...",
+    "tooLong": "Lyrics are too long, showing partial..."
+  },
+  "search": {
+    "title": "🔍 Search Results",
+    "select": "Select a song to play:",
+    "noResults": "No results for: **{query}**",
+    "cancelled": "Search cancelled",
+    "timeout": "Search timed out"
+  },
+  "favorites": {
+    "added": "❤️ **{title}** added to favorites",
+    "removed": "💔 **{title}** removed from favorites",
+    "list": "❤️ Favorite Songs",
+    "empty": "You have no favorite songs!",
+    "alreadyAdded": "This song is already in your favorites!",
+    "notInList": "This song is not in your favorites!"
+  },
+  "history": {
+    "title": "📜 Play History",
+    "empty": "No play history yet!",
+    "cleared": "✅ History cleared"
+  },
+  "playlist": {
+    "created": "✅ Playlist **{name}** created",
+    "deleted": "🗑️ Playlist **{name}** deleted",
+    "added": "✅ **{title}** added to playlist **{playlist}**",
+    "removed": "✅ **{title}** removed from playlist **{playlist}**",
+    "loaded": "✅ Loading **{count}** songs from playlist **{name}**",
+    "list": "📋 Your Playlists",
+    "tracks": "📋 Songs in Playlist: {name}",
+    "empty": "This playlist is empty!",
+    "noPlaylists": "You have no playlists!",
+    "notFound": "Playlist not found!",
+    "alreadyExists": "A playlist with that name already exists!",
+    "maxSize": "Playlist is full! Maximum {max} songs",
+    "renamed": "✅ Playlist renamed to **{name}**"
+  },
+  "autoplay": {
+    "on": "🎵 Autoplay enabled",
+    "off": "⏹️ Autoplay disabled"
+  },
+  "seek": {
+    "success": "⏩ Jumped to {time}",
+    "invalid": "Invalid time format! Use: 1:30 or 90",
+    "outOfRange": "Time exceeds song duration!"
+  },
+  "settings": {
+    "updated": "✅ Settings updated successfully",
+    "language": "Language changed to {lang}",
+    "djRole": "DJ role set to {role}",
+    "volume": "Default volume set to {volume}%",
+    "announce": "Song announcements {status}",
+    "title": "⚙️ Server Settings"
+  },
+  "status": {
+    "on": "enabled",
+    "off": "disabled"
+  }
+}

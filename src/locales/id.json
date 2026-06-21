@@ -1,0 +1,143 @@
+{
+  "common": {
+    "error": "Terjadi kesalahan",
+    "success": "Berhasil",
+    "notInVoice": "Kamu harus bergabung ke voice channel terlebih dahulu!",
+    "notSameVoice": "Kamu harus berada di voice channel yang sama dengan bot!",
+    "noPlayer": "Tidak ada musik yang sedang diputar!",
+    "noQueue": "Antrian kosong!",
+    "noPermission": "Kamu tidak memiliki izin untuk menggunakan perintah ini!",
+    "djOnly": "Perintah ini hanya bisa digunakan oleh DJ atau Admin!",
+    "loading": "Memuat...",
+    "duration": "Durasi",
+    "requestedBy": "Diminta oleh",
+    "source": "Sumber",
+    "position": "Posisi",
+    "volume": "Volume",
+    "page": "Halaman"
+  },
+  "play": {
+    "searching": "🔍 Mencari: **{query}**",
+    "notFound": "❌ Tidak ditemukan lagu untuk: **{query}**",
+    "added": "✅ Ditambahkan ke antrian: **{title}**",
+    "addedPlaylist": "✅ Menambahkan **{count}** lagu dari **{name}** ke antrian",
+    "playing": "▶️ Memutar: **{title}**",
+    "queueFull": "❌ Antrian penuh! Maksimal {max} lagu",
+    "spotifyLink": "🎵 Mendeteksi link Spotify, mengambil metadata...",
+    "liveStream": "🔴 Siaran Langsung"
+  },
+  "queue": {
+    "title": "🎵 Antrian Musik",
+    "empty": "Antrian kosong. Gunakan `/play` untuk menambah lagu!",
+    "nowPlaying": "Sekarang Diputar",
+    "upNext": "Selanjutnya",
+    "songs": "lagu",
+    "totalDuration": "Total Durasi",
+    "loop": "Ulangi",
+    "shuffle": "Acak",
+    "autoplay": "Putar Otomatis"
+  },
+  "nowplaying": {
+    "title": "🎵 Sekarang Diputar",
+    "progress": "Progres",
+    "loop": "Mode Ulangi",
+    "shuffle": "Acak",
+    "autoplay": "Putar Otomatis",
+    "volume": "Volume"
+  },
+  "skip": {
+    "success": "⏭️ Melewati: **{title}**",
+    "noNext": "Tidak ada lagu berikutnya!"
+  },
+  "previous": {
+    "success": "⏮️ Kembali ke: **{title}**",
+    "noPrevious": "Tidak ada lagu sebelumnya!"
+  },
+  "pause": {
+    "success": "⏸️ Musik dijeda",
+    "alreadyPaused": "Musik sudah dijeda!"
+  },
+  "resume": {
+    "success": "▶️ Musik dilanjutkan",
+    "notPaused": "Musik tidak sedang dijeda!"
+  },
+  "stop": {
+    "success": "⏹️ Musik dihentikan dan antrian dibersihkan"
+  },
+  "loop": {
+    "none": "⬜ Mode ulangi dimatikan",
+    "track": "🔂 Mengulangi lagu ini",
+    "queue": "🔁 Mengulangi seluruh antrian"
+  },
+  "shuffle": {
+    "on": "🔀 Mode acak diaktifkan",
+    "off": "➡️ Mode acak dimatikan"
+  },
+  "volume": {
+    "set": "🔊 Volume diatur ke **{volume}%**",
+    "invalid": "Volume harus antara 1 hingga 100!",
+    "current": "Volume saat ini: **{volume}%**"
+  },
+  "lyrics": {
+    "title": "📜 Lirik: {title}",
+    "notFound": "❌ Lirik tidak ditemukan untuk: **{title}**",
+    "searching": "🔍 Mencari lirik...",
+    "tooLong": "Lirik terlalu panjang, menampilkan sebagian..."
+  },
+  "search": {
+    "title": "🔍 Hasil Pencarian",
+    "select": "Pilih lagu yang ingin diputar:",
+    "noResults": "Tidak ada hasil untuk: **{query}**",
+    "cancelled": "Pencarian dibatalkan",
+    "timeout": "Waktu pencarian habis"
+  },
+  "favorites": {
+    "added": "❤️ **{title}** ditambahkan ke favorit",
+    "removed": "💔 **{title}** dihapus dari favorit",
+    "list": "❤️ Lagu Favorit",
+    "empty": "Kamu belum memiliki lagu favorit!",
+    "alreadyAdded": "Lagu ini sudah ada di favorit!",
+    "notInList": "Lagu ini tidak ada di favorit!"
+  },
+  "history": {
+    "title": "📜 Riwayat Diputar",
+    "empty": "Belum ada riwayat lagu!",
+    "cleared": "✅ Riwayat berhasil dihapus"
+  },
+  "playlist": {
+    "created": "✅ Playlist **{name}** berhasil dibuat",
+    "deleted": "🗑️ Playlist **{name}** berhasil dihapus",
+    "added": "✅ **{title}** ditambahkan ke playlist **{playlist}**",
+    "removed": "✅ **{title}** dihapus dari playlist **{playlist}**",
+    "loaded": "✅ Memuat **{count}** lagu dari playlist **{name}**",
+    "list": "📋 Playlist Kamu",
+    "tracks": "📋 Lagu dalam Playlist: {name}",
+    "empty": "Playlist ini kosong!",
+    "noPlaylists": "Kamu belum memiliki playlist!",
+    "notFound": "Playlist tidak ditemukan!",
+    "alreadyExists": "Playlist dengan nama itu sudah ada!",
+    "maxSize": "Playlist sudah penuh! Maksimal {max} lagu",
+    "renamed": "✅ Playlist diubah nama menjadi **{name}**"
+  },
+  "autoplay": {
+    "on": "🎵 Putar otomatis diaktifkan",
+    "off": "⏹️ Putar otomatis dimatikan"
+  },
+  "seek": {
+    "success": "⏩ Melompat ke {time}",
+    "invalid": "Format waktu tidak valid! Gunakan: 1:30 atau 90",
+    "outOfRange": "Waktu melebihi durasi lagu!"
+  },
+  "settings": {
+    "updated": "✅ Pengaturan berhasil diperbarui",
+    "language": "Bahasa diubah ke {lang}",
+    "djRole": "Peran DJ diatur ke {role}",
+    "volume": "Volume default diatur ke {volume}%",
+    "announce": "Pengumuman lagu {status}",
+    "title": "⚙️ Pengaturan Server"
+  },
+  "status": {
+    "on": "diaktifkan",
+    "off": "dimatikan"
+  }
+}
