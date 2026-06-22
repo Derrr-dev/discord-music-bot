@@ -1,8 +1,30 @@
 # 🎵 Discord Music Bot — Full Featured
 
-Bot musik Discord lengkap dengan integrasi Spotify, dukungan antrian, playlist, lirik, dan banyak fitur lainnya.
+Bot musik Discord lengkap dengan integrasi Spotify, dukungan antrian, playlist, lirik, dan banyak fitur lainnya. **Bot ini bersifat publik — siapapun bisa mengundangnya ke server mereka!**
 
-## ✨ Fitur
+## 🔗 Invite Bot ke Server
+
+```
+https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=36793408&scope=bot+applications.commands
+```
+
+> Ganti `YOUR_CLIENT_ID` dengan Client ID dari [Discord Developer Portal](https://discord.com/developers/applications)
+
+### Permission yang diperlukan (36793408):
+| Permission | Fungsi |
+|-----------|--------|
+| Send Messages | Kirim pesan & embed |
+| Embed Links | Tampilkan embed musik |
+| Read Message History | Baca history pesan |
+| Add Reactions | Tambah reaksi |
+| Manage Messages | Hapus pesan bot |
+| Connect | Masuk voice channel |
+| Speak | Putar audio di voice |
+| Use Voice Activity | Streaming audio |
+
+---
+
+## ✨ Fitur Lengkap
 
 | Fitur | Deskripsi |
 |-------|-----------|
@@ -21,11 +43,12 @@ Bot musik Discord lengkap dengan integrasi Spotify, dukungan antrian, playlist, 
 | ⏩ Seek | Lompat ke waktu tertentu |
 | 🌐 Multi Bahasa | Bahasa Indonesia & English |
 | ⚙️ Admin Panel | Pengaturan server via `/settings` |
-| 🔴 Status Now Playing | Tampilan lagu yang sedang diputar |
+| 🎮 Button Controls | Kontrol via tombol interaktif |
 | 🎵 Spotify Link | Support URL Spotify (track/playlist/album) |
-| 🎮 Button Controls | Kontrol via tombol interaktif di Discord |
 
-## 📋 Daftar Perintah
+---
+
+## 📋 Daftar Perintah (Slash Commands)
 
 ### 🎵 Musik
 | Perintah | Deskripsi |
@@ -78,17 +101,37 @@ Bot musik Discord lengkap dengan integrasi Spotify, dukungan antrian, playlist, 
 | `/settings announce <true/false>` | Umumkan lagu baru |
 | `/settings maxqueue <size>` | Batas antrian (10-500) |
 
-## 🚀 Setup & Instalasi
+---
+
+## 🌐 Cara Membuat Bot Publik (Owner)
+
+Agar siapapun bisa invite bot Anda:
+
+1. Buka [Discord Developer Portal](https://discord.com/developers/applications)
+2. Pilih aplikasi bot Anda
+3. **Tab "Bot":**
+   - ✅ Aktifkan **"Public Bot"**
+   - ✅ Presence Intent
+   - ✅ Server Members Intent
+   - ✅ Message Content Intent
+4. **Tab "Installation"** → Guild Install ✅
+5. Bagikan link invite:
+   ```
+   https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=36793408&scope=bot+applications.commands
+   ```
+
+---
+
+## 🚀 Setup & Instalasi (Self-Host)
 
 ### 1. Prasyarat
 - Node.js v18 atau lebih baru
-- FFmpeg (sudah termasuk via `ffmpeg-static`)
 - Akun Discord Developer
 - Akun Spotify Developer
 
 ### 2. Clone & Install
 ```bash
-git clone <repo-url>
+git clone https://github.com/Derrr-dev/discord-music-bot.git
 cd discord-music-bot
 npm install
 ```
@@ -98,20 +141,22 @@ npm install
 cp .env.example .env
 ```
 
-Edit `.env` dan isi:
-- `DISCORD_TOKEN` — Token bot dari [Discord Developer Portal](https://discord.com/developers/applications)
-- `DISCORD_CLIENT_ID` — Client ID dari halaman yang sama
-- `SPOTIFY_CLIENT_ID` — Dari [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-- `SPOTIFY_CLIENT_SECRET` — Dari dashboard yang sama
-- `GENIUS_API_KEY` — Dari [Genius API](https://genius.com/api-clients) (opsional, untuk lirik)
+Edit `.env`:
+```env
+DISCORD_TOKEN=token_bot_anda
+DISCORD_CLIENT_ID=client_id_anda
+SPOTIFY_CLIENT_ID=spotify_client_id
+SPOTIFY_CLIENT_SECRET=spotify_client_secret
+GENIUS_API_KEY=genius_api_key_opsional
+```
 
 ### 4. Deploy Slash Commands
 ```bash
-# Deploy global (butuh 1 jam)
+# Deploy global (berlaku di semua server, butuh ~1 jam)
 npm run deploy
 
-# Deploy ke satu guild (instan, untuk testing)
-GUILD_ID=your_guild_id npm run deploy
+# Deploy ke satu server (instan, untuk testing)
+GUILD_ID=id_server npm run deploy
 ```
 
 ### 5. Jalankan Bot
@@ -119,48 +164,38 @@ GUILD_ID=your_guild_id npm run deploy
 # Development
 npm run dev
 
-# Production (setelah build)
-npm run build
-npm start
+# Production
+npm run build && npm start
 ```
+
+---
 
 ## 🌐 Deploy ke Pella.app
 
-1. Push ke GitHub (lihat bagian bawah)
+1. Push ke GitHub (sudah dilakukan ✅)
 2. Buka [pella.app](https://www.pella.app/)
-3. Connect ke GitHub repo
-4. Atur environment variables di dashboard Pella
+3. Connect ke repo: `Derrr-dev/discord-music-bot`
+4. Set environment variables di dashboard
 5. Deploy!
 
-Pella memerlukan variabel:
-```
-DISCORD_TOKEN=
-DISCORD_CLIENT_ID=
-SPOTIFY_CLIENT_ID=
-SPOTIFY_CLIENT_SECRET=
-GENIUS_API_KEY=
-```
+---
 
-## 🔧 Cara Dapat Token
+## 🔧 Cara Mendapatkan Token
 
 ### Discord Bot Token
-1. Buka [discord.com/developers/applications](https://discord.com/developers/applications)
-2. New Application → beri nama
-3. Bot → Add Bot → Reset Token → copy
-4. Aktifkan: `PRESENCE INTENT`, `SERVER MEMBERS INTENT`, `MESSAGE CONTENT INTENT`
-5. OAuth2 → URL Generator → pilih `bot` + `applications.commands`
-6. Pilih permissions: `Connect`, `Speak`, `Send Messages`, `Embed Links`, `Read Message History`
-7. Copy URL dan invite bot ke server
+1. [discord.com/developers/applications](https://discord.com/developers/applications) → New Application
+2. Bot → Add Bot → Reset Token → copy
+3. Aktifkan semua 3 Privileged Gateway Intents
 
 ### Spotify API
-1. Buka [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard)
-2. Create App
-3. Copy Client ID dan Client Secret
+1. [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard) → Create App
+2. Copy Client ID & Client Secret
 
 ### Genius Lyrics (Opsional)
-1. Buka [genius.com/api-clients](https://genius.com/api-clients)
-2. New API Client
-3. Copy Client Access Token
+1. [genius.com/api-clients](https://genius.com/api-clients) → New API Client
+2. Copy Client Access Token
+
+---
 
 ## 🏗️ Struktur Proyek
 
@@ -168,36 +203,32 @@ GENIUS_API_KEY=
 discord-music-bot/
 ├── src/
 │   ├── commands/
-│   │   ├── music/          # Semua perintah musik
-│   │   └── admin/          # Perintah admin
-│   ├── events/             # Discord events
-│   ├── handlers/           # Command & event loaders
-│   ├── music/              # MusicPlayer, Queue, Track
-│   ├── services/           # Spotify & Lyrics API
-│   ├── database/           # SQLite database
-│   ├── utils/              # Embeds, i18n, helpers
-│   ├── locales/            # id.json, en.json
-│   ├── types/              # TypeScript types
-│   ├── bot.ts              # Bot setup
-│   ├── index.ts            # Entry point
-│   └── deploy-commands.ts  # Deploy slash commands
-├── data/                   # Database (auto-created)
+│   │   ├── music/       # play, pause, skip, queue, lyrics, search, dll
+│   │   └── admin/       # settings
+│   ├── events/          # ready, interactionCreate, voiceStateUpdate
+│   ├── handlers/        # commandHandler, eventHandler
+│   ├── music/           # MusicPlayer, Queue, Track, PlayerManager
+│   ├── services/        # SpotifyService, LyricsService
+│   ├── database/        # SQLite (playlists, favorites, history)
+│   ├── utils/           # embeds, i18n, helpers
+│   ├── locales/         # id.json (Indonesian), en.json (English)
+│   ├── types/           # TypeScript interfaces
+│   ├── bot.ts           # Setup client
+│   ├── index.ts         # Entry point
+│   └── deploy-commands.ts
 ├── .env.example
 ├── package.json
 └── tsconfig.json
 ```
 
-## 📝 Catatan Teknis
-
-- **Audio source**: YouTube (via play-dl) — Spotify hanya digunakan untuk metadata
-- **Database**: SQLite lokal (better-sqlite3) — data tersimpan per server + user
-- **Voice**: @discordjs/voice dengan FFmpeg untuk streaming
-- **Language**: TypeScript dengan strict mode
-
-## 🤝 Kontribusi
-
-Pull request dan issue sangat diterima!
+## 📝 Tech Stack
+- **Runtime**: Node.js 18+ / TypeScript
+- **Discord**: discord.js v14 + @discordjs/voice
+- **Audio**: play-dl + FFmpeg (YouTube streaming)
+- **Spotify**: spotify-web-api-node (metadata only)
+- **Lyrics**: genius-lyrics
+- **Database**: better-sqlite3 (SQLite lokal)
+- **i18n**: i18next
 
 ## 📄 Lisensi
-
-MIT License
+MIT License — bebas digunakan dan dimodifikasi
